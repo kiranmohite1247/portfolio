@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kiran Mohite | DevOps Engineer</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        function toggleSection(id) {
+            const element = document.getElementById(id);
+            element.classList.toggle("hidden");
+        }
+    </script>
 </head>
 <body>
 
@@ -13,124 +19,116 @@
         <h1 class="fade-in">Kiran Mohite</h1>
         <p class="subtitle fade-in-delay">DevOps Engineer | AWS | Docker | Kubernetes | Terraform</p>
         <div class="hero-buttons fade-in-delay-2">
-            <a href="Kiran_Mohite.pdf" target="_blank" class="btn primary">Download Resume (PDF)</a>
-            <a href="#contact" class="btn secondary">Contact Me</a>
+            <a href="Kiran_Mohite.pdf" target="_blank" class="btn primary">Download Resume</a>
         </div>
         <div class="badge fade-in-delay-3">🚀 CI/CD Pipeline Automated & Cloud Deployed</div>
+
+        <!-- Animated DevOps Pipeline Graphic -->
+        <div class="pipeline">
+            <div>Code</div>
+            <div>Build</div>
+            <div>Test</div>
+            <div>Deploy</div>
+            <div>Monitor</div>
+        </div>
     </div>
 </header>
 
 <section class="section">
 <div class="container">
-<h2>Career Objective</h2>
-<p>
-7 years of IT experience, including 3.7+ years as a DevOps Engineer at Nayagara Technologies Limited.
-Built and automated CI/CD pipelines with Jenkins and Git, deployed Docker containers on AWS ECS Fargate,
-and managed multi-environment releases. Implemented Terraform-based infrastructure-as-code to streamline
-deployments and reduce manual effort. Worked in Agile/Scrum teams, contributing to sprint planning,
-daily stand-ups, and delivering reliable, repeatable deployments.
-</p>
-</div>
-</section>
-
-<section class="section alt-bg">
-<div class="container">
-<h2>Professional Profile</h2>
-<p><strong>Overall Experience:</strong> 7+ Years</p>
-<p><strong>DevOps Experience:</strong> 3.7+ Years</p>
-</div>
-</section>
-
-<section class="section">
-<div class="container">
 <h2>Professional Experience</h2>
 
-<h3>1) Nayagara Technologies Limited (Nov 2023 - Present)</h3>
-<p><strong>Role:</strong> DevOps Engineer</p>
-<p><strong>Domain:</strong> Banking</p>
-<ul>
-<li>3.7+ years of IT experience with strong expertise in DevOps, CI/CD Pipeline, Infrastructure management, AWS and Azure DevOps.</li>
-<li>Worked extensively on AWS services: EC2, VPC, EBS, AMI, SNS, RDS, CloudWatch, AWS CLI, AWS Config, Autoscaling, CloudFront, IAM, S3, Route53.</li>
-<li>Ensured consistent and reproducible deployments across multiple environments.</li>
-<li>Automated Lambda triggers via S3, API Gateway, CloudWatch, and DynamoDB.</li>
-<li>Monitored execution logs and errors via CloudWatch Logs.</li>
-<li>Automated NFS mount using user data scripts and Ansible.</li>
-<li>Participated in Agile/Scrum ceremonies including sprint planning and retrospectives.</li>
-<li>Automated Docker image builds using Dockerfiles and Jenkins pipelines.</li>
-<li>Deployed applications on Kubernetes using manifest files.</li>
-<li>Designed VPC with public/private subnets across two availability zones.</li>
-<li>Implemented Amazon EFS and mounted across 8 EC2 instances.</li>
-<li>Configured tag-based automated EBS snapshot policies.</li>
-<li>Created IAM policies and S3 bucket policies following least privilege principle.</li>
-<li>Used Prometheus and Grafana for monitoring production environment.</li>
-<li>Automated AWS tasks using Python (boto3) and Shell scripting.</li>
-<li>Configured Route53 health checks and DNS failover routing.</li>
-<li>Collaborated with developers, QA and architecture teams for production support.</li>
-</ul>
+<div class="timeline">
 
-<h3>2) Tech Mahindra (Mar 2022 – Oct 2023)</h3>
-<p><strong>Role:</strong> Customer Support Associate</p>
-<p><strong>Project:</strong> Verizon Telecom | Domain: Telecom</p>
-<ul>
-<li>Provided Linux server support and resolved production incidents.</li>
-<li>Automated deployments and configuration using Ansible.</li>
-<li>Managed AWS resources including EC2, S3, IAM and security groups.</li>
-<li>Monitored performance issues and coordinated fixes.</li>
-<li>Supported Azure DevOps pipelines and Git workflows.</li>
-<li>Created automation scripts and documented recurring issues.</li>
-<li>Assisted application deployments on Apache and Tomcat.</li>
-<li>Gained exposure to AWS, Azure and Docker environments.</li>
-</ul>
+<div class="timeline-item">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content">
+        <h3 onclick="toggleSection('nayagara')">1) Nayagara Technologies Limited (Nov 2023 - Present) – DevOps Engineer (Click to Expand)</h3>
+        <div id="nayagara" class="hidden">
+            <p><strong>Domain:</strong> Banking</p>
+            <p>Overall, 3.7+ years of IT experience with strong expertise in DevOps, CI/CD Pipeline, Infrastructure management, AWS and Azure DevOps.</p>
+            <ul>
+                <li>Extensively worked on AWS Cloud platform including EC2, VPC, EBS, AMI, SNS, RDS, CloudWatch, AWS CLI, AWS Config, Autoscaling, CloudFront, IAM, S3, and Route53.</li>
+                <li>Ensuring consistent and reproducible deployments across multiple environments.</li>
+                <li>Automated Lambda triggers via S3, API Gateway, CloudWatch, and DynamoDB.</li>
+                <li>Monitored execution logs and errors via CloudWatch Logs.</li>
+                <li>Automated NFS mount using user data scripts or Ansible.</li>
+                <li>Worked in Agile/Scrum teams, participating in sprint planning, daily stand-ups, and retrospectives, delivering incremental and reliable releases.</li>
+                <li>Automated Docker image builds by writing Dockerfiles and configuring Jenkins pipelines to build images on code commits.</li>
+                <li>Deployed applications on Kubernetes using manifest files, managing pods and services to support scalable and reliable deployments.</li>
+                <li>Created a VPC with eight subnets across two availability zones, with public and private subnet architecture using Internet Gateway and NAT Gateways.</li>
+                <li>Automated NFS mount configurations using EC2 user data scripts and Ansible. Implemented Amazon EFS as centralized storage and mounted it on 8 EC2 instances.</li>
+                <li>Identified critical EC2 instances and implemented tag-based automated EBS snapshot policies for daily and weekly backups.</li>
+                <li>Created custom IAM policies using JSON and managed S3 bucket policies following least-privilege principles.</li>
+                <li>Used Prometheus and Grafana for daily monitoring of the production environment.</li>
+                <li>Used Python (boto3) to automate AWS tasks such as starting/stopping EC2, uploading files to S3, API testing and validation.</li>
+                <li>Configured CloudWatch monitoring, Route53 health checks and DNS failover routing.</li>
+                <li>Collaborated with developers, architecture teams, QA, and support teams to resolve production issues.</li>
+            </ul>
+        </div>
+    </div>
+</div>
 
-<h3>3) Citius (Altius) Customer Service Pvt. Ltd.</h3>
-<p><strong>Role:</strong> L2 Support Associate</p>
-<p><strong>Project:</strong> Five Below (USA) | Domain: Supply Chain Management</p>
-<ul>
-<li>Provided L2 production support for supply chain and inventory applications.</li>
-<li>Monitored application/database health and batch jobs.</li>
-<li>Analyzed Linux and middleware logs to resolve incidents within SLA.</li>
-<li>Coordinated with development teams for root cause analysis.</li>
-<li>Resolved disk space issues preventing order processing failures.</li>
-</ul>
+<div class="timeline-item">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content">
+        <h3 onclick="toggleSection('techm')">2) Tech Mahindra (Mar 2022 – Oct 2023) – Customer Support Associate (Click to Expand)</h3>
+        <div id="techm" class="hidden">
+            <p><strong>Project:</strong> Verizon Telecom | <strong>Domain:</strong> Telecom</p>
+            <ul>
+                <li>Provided Linux server support by analyzing logs, fixing permission/disk issues, and restarting services to resolve production incidents.</li>
+                <li>Automated deployments and configuration changes with Ansible across multiple servers.</li>
+                <li>Managed AWS resources (EC2, S3, IAM, security groups), performing health checks and backups.</li>
+                <li>Monitored applications and databases for performance issues and coordinated fixes.</li>
+                <li>Supported Azure DevOps pipelines and Git workflows, troubleshooting failed builds and merge conflicts.</li>
+                <li>Created automation scripts and documented recurring issues to improve operational efficiency.</li>
+                <li>Provided application and production support including monitoring and incident management.</li>
+                <li>Assisted deployments on Apache and Tomcat servers and performed log analysis.</li>
+                <li>Gained exposure to AWS (EC2, S3) and Azure (VMs, Storage, monitoring) along with Docker.</li>
+                <li>Automated routine operational tasks using Shell scripting.</li>
+            </ul>
+        </div>
+    </div>
+</div>
 
+<div class="timeline-item">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content">
+        <h3 onclick="toggleSection('fivebelow')">3) Citius (Altius) Customer Service Pvt. Ltd. – L2 Support Associate (Click to Expand)</h3>
+        <div id="fivebelow" class="hidden">
+            <p><strong>Project:</strong> Five Below (USA) | <strong>Domain:</strong> Supply Chain Management</p>
+            <ul>
+                <li>Provided L2 production support for supply chain and inventory applications supporting order processing and warehouse operations.</li>
+                <li>Monitored application and database health; investigated performance issues, batch failures, and data sync delays.</li>
+                <li>Analyzed Linux, application, and middleware logs to resolve production incidents within SLA.</li>
+                <li>Managed incidents end-to-end, coordinating with development and technical teams for root cause and permanent fixes.</li>
+                <li>Worked with operations teams to assess business impact on inventory accuracy and shipments.</li>
+                <li>Fixed failed nightly inventory batch due to disk space exhaustion by clearing logs, restarting services, and validating data sync.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</div>
 </div>
 </section>
 
 <section class="section alt-bg">
 <div class="container">
-<h2>Technical Skills</h2>
-<ul>
-<li><strong>Scripting:</strong> Shell Scripting, Python</li>
-<li><strong>Cloud Services:</strong> AWS (EC2, VPC, S3, Lambda, IAM, Route53, CloudWatch), Azure DevOps</li>
-<li><strong>Operating Systems:</strong> Linux, Windows</li>
-<li><strong>Monitoring:</strong> CloudWatch, Grafana, Prometheus</li>
-<li><strong>Configuration Management:</strong> Ansible</li>
-<li><strong>Code/Image Quality:</strong> SonarQube, OWASP, CheckMarx, Trivy, Nexus</li>
-<li><strong>Web/App Servers:</strong> Apache, Tomcat, Nginx</li>
-<li><strong>Version Control:</strong> Git, GitHub</li>
-<li><strong>Containerization:</strong> Docker, Kubernetes</li>
-<li><strong>CI/CD:</strong> Jenkins</li>
-<li><strong>IaC Tool:</strong> Terraform</li>
-<li><strong>AI Tools:</strong> ChatGPT, MS Copilot</li>
-</ul>
-</div>
-</section>
+<h2>Project Architecture</h2>
 
-<section class="section">
-<div class="container">
-<h2>Education</h2>
-<p>Bachelor of Computer Application (BCA) – Rabindranath Tagore University, Bhopal (MP)</p>
+<div class="architecture">
+    <div class="arch-box">Users</div>
+    <div class="arrow">↓</div>
+    <div class="arch-box">Route 53</div>
+    <div class="arrow">↓</div>
+    <div class="arch-box">Application Load Balancer</div>
+    <div class="arrow">↓</div>
+    <div class="arch-box">ECS / Kubernetes Cluster</div>
+    <div class="arrow">↓</div>
+    <div class="arch-box">RDS / EFS</div>
 </div>
-</section>
 
-<section class="section alt-bg" id="contact">
-<div class="container">
-<h2>Contact Information</h2>
-<p>Email: kiranmohite1247@gmail.com</p>
-<p>Mobile: +91 9373561012</p>
-<p>Location: Nagpur, Maharashtra, India</p>
-<p>Date of Birth: 17/10/1989</p>
-<p>Languages: English, Hindi, Marathi</p>
 </div>
 </section>
 
